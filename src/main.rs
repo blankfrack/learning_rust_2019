@@ -35,7 +35,7 @@ fn test_move() {
     //  foo conserve sa valeur
     println!("foo après le bloc : {}", foo);
 
-    // Impossible.  La variable foo n'est plus accessible car on la moved dans le bloc en la passant à foo2
+    // Impossible.  La variable my_string n'est plus accessible car on la moved dans le bloc en la passant à my_string2
     //print!("my_string : {}", my_string);
 }
 
