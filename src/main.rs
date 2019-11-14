@@ -15,12 +15,12 @@ fn test_move() {
     println!("my_string : {}", my_string);
 
     {
-        // Après le block, foo sera toujours accessible car type de base (implémente le trait Copy)
+        // Après le block, foo sera toujours accessible car type de base (implémente le trait Copy).  STACK
         let foo2 = foo;
         println!("foo dans le block : {}", foo);
         println!("foo2 dans le bloc : {}", foo2);
 
-        // Move de variable. my_string ne sera plus accessible après le bloc car MOVED
+        // Move de variable. my_string ne sera plus accessible après le bloc car MOVED.  HEAP
         let my_string2 = my_string;
 
         // my_string a MOVED donc elle n'est plus accessible
