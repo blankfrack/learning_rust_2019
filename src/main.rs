@@ -1,15 +1,15 @@
 fn main() {
     test_move();
 
-    test_pass_by_value(); 
+    test_pass_by_value();
 
-    test_pass_by_reference(); 
+    test_pass_by_reference();
 }
 
 fn test_move() {
     // Déclaration d'une variable
     let foo: i32 = 42;
-    println!("foo : {}", foo); 
+    println!("foo : {}", foo);
 
     let my_string: String = String::from("Hello World");
     println!("my_string : {}", my_string);
@@ -45,7 +45,10 @@ fn test_pass_by_reference() {
     // pass by reference. Keeps ownership
     print_string_reference(&my_string3);
 
-    println!("my_string3 après call à print_string_reference : {}", my_string3);
+    println!(
+        "my_string3 après call à print_string_reference : {}",
+        my_string3
+    );
 }
 
 fn test_pass_by_value() {
@@ -57,7 +60,6 @@ fn test_pass_by_value() {
     // Impossible car moved
     //println!("my_string4 après call à print_string_value : {}", my_string4);
 }
-
 
 fn print_string_value(p_string: String) {
     println!("p_string : {}", p_string);
