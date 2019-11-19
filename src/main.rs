@@ -4,6 +4,8 @@ fn main() {
     test_pass_by_value();
 
     test_pass_by_reference();
+
+    test_shared_borrow();
 }
 
 fn test_move() {
@@ -68,3 +70,18 @@ fn print_string_value(p_string: String) {
 fn print_string_reference(p_string: &String) {
     println!("p_string : {}", p_string);
 }
+
+fn test_shared_borrow() {
+    let mut name : String = String::from("Hello");
+    name.push_str(" World!");
+    
+    print_name(&name);
+    print_name(&name);
+}
+
+fn print_name(name : &String) {
+    //name.push_str("string: &str");
+    println!("{}", name);
+}
+
+
