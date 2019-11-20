@@ -10,8 +10,8 @@ pub fn test_move() {
     {
         // After this block, foo will still be accessible bacause it's a base type (implementing Copy trait).  STACK
         let foo2 = foo;
-        println!("foo dans le block : {}", foo);
-        println!("foo2 dans le bloc : {}", foo2);
+        println!("foo in the block : {}", foo);
+        println!("foo2 in the block : {}", foo2);
 
         // Variable moved ! my_string will not be accessible after this block.  HEAP
         let my_string2 = my_string;
@@ -26,7 +26,7 @@ pub fn test_move() {
 
     // Still possible because foo is a base type. Its value is copied into foo2 in the previous block
     //  foo keeps its value
-    println!("foo après le bloc : {}", foo);
+    println!("foo after the block : {}", foo);
 
     // Impossible.  my_string is no longer accessible because it has been moved in the previous block to my_string2
     //print!("my_string : {}", my_string);
@@ -39,7 +39,7 @@ pub fn test_pass_by_reference() {
     print_string_reference(&my_string3);
 
     println!(
-        "my_string3 après call à print_string_reference : {}",
+        "my_string3 after calling print_string_reference : {}",
         my_string3
     );
 }
