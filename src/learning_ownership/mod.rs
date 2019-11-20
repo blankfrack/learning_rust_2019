@@ -1,5 +1,6 @@
+/// Test moved
 pub fn test_move() {
-    // Déclaration d'une variable
+    // Déclaring a variable
     let foo: i32 = 42;
     println!("foo : {}", foo);
 
@@ -7,27 +8,27 @@ pub fn test_move() {
     println!("my_string : {}", my_string);
 
     {
-        // Après le block, foo sera toujours accessible car type de base (implémente le trait Copy).  STACK
+        // After this block, foo will still be accessible bacause it's a base type (implementing Copy trait).  STACK
         let foo2 = foo;
         println!("foo dans le block : {}", foo);
         println!("foo2 dans le bloc : {}", foo2);
 
-        // Move de variable. my_string ne sera plus accessible après le bloc car MOVED.  HEAP
+        // Variable moved ! my_string will not be accessible after this block.  HEAP
         let my_string2 = my_string;
 
-        // my_string a MOVED donc elle n'est plus accessible
+        // my_string is MOVED so it's no longer accessible
         //print!("my_string : {}", my_string);
         println!("my_string2 : {}", my_string2);
     }
 
-    // Impossible car on est sorti du bloc dans lequel foo2 a été déclarée
+    // Impossible bacause we are now outside the block in which foo2 has been declared
     //println!("foo2 après block : {}", foo2);
 
-    // Toujours possible car foo est un type de base. Sa valeur est copié dans foo2 dans le bloc précédent
-    //  foo conserve sa valeur
+    // Still possible because foo is a base type. Its value is copied into foo2 in the previous block
+    //  foo keeps its value
     println!("foo après le bloc : {}", foo);
 
-    // Impossible.  La variable my_string n'est plus accessible car on la moved dans le bloc en la passant à my_string2
+    // Impossible.  my_string is no longer accessible because it has been moved in the previous block to my_string2
     //print!("my_string : {}", my_string);
 }
 
@@ -49,7 +50,7 @@ pub fn test_pass_by_value() {
     // pass by value and hence transfer ownership
     print_string_value(my_string4);
 
-    // Impossible car moved
+    // Impossible because moved
     //println!("my_string4 après call à print_string_value : {}", my_string4);
 }
 
