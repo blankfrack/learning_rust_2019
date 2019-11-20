@@ -32,6 +32,7 @@ pub fn test_move() {
     //print!("my_string : {}", my_string);
 }
 
+/// Test Passed by Reference
 pub fn test_pass_by_reference() {
     let my_string3: String = String::from("my_string3");
 
@@ -44,6 +45,7 @@ pub fn test_pass_by_reference() {
     );
 }
 
+/// Test Passed by Value
 pub fn test_pass_by_value() {
     let my_string4: String = String::from("my_string4");
 
@@ -54,14 +56,17 @@ pub fn test_pass_by_value() {
     //println!("my_string4 après call à print_string_value : {}", my_string4);
 }
 
+/// Printing a string received by value
 fn print_string_value(p_string: String) {
     println!("p_string : {}", p_string);
 }
 
+/// Printing a string received by reference
 fn print_string_reference(p_string: &String) {
     println!("p_string : {}", p_string);
 }
 
+/// Test Shared Barrow
 pub fn test_shared_borrow() {
     let mut name: String = String::from("Hello");
     name.push_str(" World!");
@@ -70,6 +75,7 @@ pub fn test_shared_borrow() {
     print_name(&name);
 }
 
+/// Printing a name received by reference
 fn print_name(name: &String) {
     // Impossible.  Not mutable
     // name.push_str("string: &str");
