@@ -1,8 +1,8 @@
-// On défini les modules
+// Module definitions here
 mod learning_ownership;
 mod learning_standard_lib;
 
-// On défini ce que nous allons utiliser dans les modules/librairies standard/librairie importées
+// Define what we will be using
 use learning_ownership::*;
 use learning_standard_lib::vectors::*;
 
