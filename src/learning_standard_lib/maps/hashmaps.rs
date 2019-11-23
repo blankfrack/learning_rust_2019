@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-pub fn test_hashmap() {
+pub fn test_hashmaps() {
     println!("Test HashMap");
 
     let mut h: HashMap<String, String> = HashMap::new();
