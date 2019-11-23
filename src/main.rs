@@ -5,6 +5,7 @@ mod learning_standard_lib;
 // Define what we will be using
 use learning_ownership::*;
 use learning_standard_lib::vectors::*;
+use learning_standard_lib::hashmaps::*;
 
 /// Main
 fn main() {
@@ -17,4 +18,6 @@ fn main() {
     test_shared_borrow();
 
     test_vector();
+
+    test_hashmap();
 }
