@@ -6,7 +6,8 @@ mod learning_standard_lib;
 use learning_ownership::*;
 use learning_standard_lib::vectors::*;
 use learning_standard_lib::hashmaps::*;
-
+use learning_standard_lib::lists::linked_lists::*;
+    
 /// Main
 fn main() {
     test_move();
@@ -20,4 +21,6 @@ fn main() {
     test_vector();
 
     test_hashmap();
+
+    test_linked_list();
 }
