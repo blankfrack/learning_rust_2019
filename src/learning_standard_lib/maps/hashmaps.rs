@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 pub fn test_hashmaps() {
-    println!("Test HashMap");
+    println!("Testing HashMap");
 
     let mut h: HashMap<String, String> = HashMap::new();
 
